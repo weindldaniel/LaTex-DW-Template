@@ -1,0 +1,61 @@
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{%
+    \hfill\textcolor{gray}{\footnotesize\insertframenumber}\hspace{1em}\vspace{0.5em}
+}
+
+\definecolor{fillblue}{RGB}{14, 52, 75}
+\definecolor{fillaccent}{RGB}{183, 1, 0}
+\definecolor{filllight}{RGB}{250, 240, 240}
+
+\setbeamercolor{frametitle}{fg=fillblue}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{subtitle}{fg=white!80}
+\setbeamercolor{author}{fg=white!90}
+\setbeamercolor{itemize item}{fg=fillaccent}
+\setbeamercolor{itemize subitem}{fg=fillblue}
+
+\setbeamertemplate{frametitle}{%
+    \vspace{0.6em}%
+    {\large\bfseries\color{fillblue}\insertframetitle}%
+    \par\vspace{0.15em}%
+    {\color{fillaccent}\rule{0.12\textwidth}{1.5pt}}%
+    \par\vspace{0.3em}%
+}
+
+\setbeamertemplate{title page}{%
+    \vfill
+    \begin{center}
+        {\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par}%
+        \vspace{0.3em}%
+        {\color{fillaccent}\rule{0.6\textwidth}{0.8pt}\par}%
+        \vspace{1.4em}%
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+        \vspace{1.0em}%
+        {\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par}%
+    \end{center}
+    \vfill
+}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[naustrian]{babel}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\graphicspath{{../shared/images/}}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{array}
+
+\newcommand{\plan}{\cellcolor{fillaccent!35}}
+\newcommand{\darkbackground}{%
+    \usebackgroundtemplate{%
+        \begin{tikzpicture}[remember picture, overlay]
+            \fill[fillblue] (current page.south west) rectangle (current page.north east);
+            \fill[fillaccent] (current page.south west) rectangle ([yshift=0.5cm]current page.south east);
+        \end{tikzpicture}%
+    }%
+}

@@ -1,0 +1,100 @@
+% -------------------------------------------------
+% Schrift- und Zeichenkodierung (sehr früh laden!)
+% -------------------------------------------------
+\usepackage[T1]{fontenc}        % Korrekte Silbentrennung und Umlaute im PDF
+\usepackage[utf8]{inputenc}     % UTF-8 Eingabekodierung (ä, ö, ü, ß)
+
+% -------------------------------------------------
+% Kapitelnummerierung
+% -------------------------------------------------
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]
+  {\normalfont\huge\bfseries}
+  {\thechapter}
+  {1em}
+  {}
+% -------------------------------------------------
+% Sprachunterstützung
+% -------------------------------------------------
+\usepackage[english,ngerman,naustrian]{babel} % Mehrsprachigkeit
+
+% -------------------------------------------------
+% Mathematik
+% -------------------------------------------------
+\usepackage{amsmath, amssymb}   % Erweiterte mathematische Umgebungen & Symbole
+
+% -------------------------------------------------
+% Seitenlayout
+% -------------------------------------------------
+\usepackage{geometry}           % Seitenränder und Papierformat
+\geometry{a4paper, margin=2.5cm}
+
+% -------------------------------------------------
+% Grafiken und Float-Handling
+% -------------------------------------------------
+\usepackage{graphicx}           % Einbinden von Bildern
+\graphicspath{{/Users/danielweindl/_source/LaTex-New/shared/images}}   % Standardpfad für Grafiken
+\usepackage{float}              % Erzwingt Platzierung von Abbildungen (H)
+\usepackage{caption}            % Kontrolle über Bild- und Tabellenbeschriftungen
+\usepackage{pdfpages}           % Einbinden kompletter PDF-Seiten
+\usepackage{longtable}
+
+% -------------------------------------------------
+% Abstände und Formatierung
+% -------------------------------------------------
+\usepackage{setspace}           % Zeilenabstände (z. B. onehalfspacing)
+
+% -------------------------------------------------
+% Hyperlinks (immer eher spät laden!)
+% -------------------------------------------------
+\usepackage{hyperref}           % Klickbare Links, Referenzen, TOC
+
+% -------------------------------------------------
+% Aufzählungen
+% -------------------------------------------------
+\usepackage{enumitem}           % Kontrolle über itemize/enumerate
+
+% -------------------------------------------------
+% TikZ – Grafiken & Diagramme
+% -------------------------------------------------
+\usepackage{tikz}               % Zeichnungen, Diagramme, Strukturen
+\usetikzlibrary{positioning,calc} % (DOPPELT + Rechenoperationen)
+
+% -------------------------------------------------
+% Listings – Quellcode
+% -------------------------------------------------
+\usepackage{listings}           % Darstellung von Code
+\usepackage{xcolor}             % Farben für Syntax-Highlighting
+
+\lstset{
+    inputencoding=utf8,
+    extendedchars=true           % Sonderzeichen im Code
+}
+
+\lstdefinestyle{pythonstyle}{
+    language=Python,             % Python-Syntax
+    basicstyle=\ttfamily\small,  % Monospace-Schrift
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{teal},
+    numbers=left,                % Zeilennummern
+    numberstyle=\tiny,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    tabsize=4,
+    captionpos=b
+}
+
+% -------------------------------------------------
+% Literaturverwaltung
+% -------------------------------------------------
+\usepackage[
+    backend=biber,
+    style=alphabetic,
+    sorting=ynt
+]{biblatex}                     % Moderne Literaturverwaltung
+\usepackage{csquotes}           % Korrekte Anführungszeichen (wichtig für biblatex)
+\addbibresource{bibliography.bib}

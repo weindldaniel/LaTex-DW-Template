@@ -1,0 +1,35 @@
+\documentclass[aspectratio=169]{beamer}
+\input{preamble/settings.tex}
+
+\title{Titel der Präsentation}
+\subtitle{Untertitel}
+\author{Daniel Weindl}
+\institute{}
+\date{}
+
+\begin{document}
+
+% Deckblatt
+{
+\setbeamertemplate{footline}{}
+\darkbackground
+\begin{frame}
+    \titlepage
+\end{frame}
+}
+
+\input{slides/inhalt}
+
+% Abschluss
+{
+\setbeamertemplate{footline}{}
+\darkbackground
+\begin{frame}
+    \vspace{4em}
+    \begin{center}
+        {\LARGE\bfseries\color{white} Fragen?}
+    \end{center}
+\end{frame}
+}
+
+\end{document}

@@ -1,0 +1,48 @@
+
+\documentclass[a4paper,12pt,oneside]{book}
+\input{preamble/settings}
+\addbibresource{bibliography.bib}
+
+% ------------------ Dokument ------------------
+\begin{document}
+% ------------------ Titelseite ------------------
+\begin{titlepage}
+    \centering
+
+    % ------------------ Titel ------------------
+    \vspace*{2cm}
+    {\LARGE \bfseries Titel \par}
+
+    \vspace{0.8cm}
+    \rule{0.8\textwidth}{0.6pt}
+
+    % ------------------ Untertitel ------------------
+    \vspace{0.8cm}
+    {\large Untertitel \par}
+
+    \vspace{1.2cm}
+    \rule{0.6\textwidth}{0.4pt}
+
+    % ------------------ Meta-Informationen ------------------
+    \vfill
+    \begin{tabular}{rl}
+        \textbf{Name:} & Daniel Weindl \\
+        \textbf{Studiengang:} & Automatisierungstechnik \\
+        \textbf{Datum:} & \today \\
+    \end{tabular}
+
+    \vspace{1.5cm}
+
+\end{titlepage}
+
+% ------------------ Seitenbeschriftung ------------------
+\pagenumbering{arabic}
+\setcounter{page}{1}
+% ------------------ Inhaltsverzeichnis ------------------
+\tableofcontents
+% ------------------ Kapitel ------------------
+\input{chapters/Einleitung.tex}
+\input{chapters/Kapitel_1.tex}
+% ------------------ Literaturverzeichnis ------------------
+%\printbibliography
+\end{document}
