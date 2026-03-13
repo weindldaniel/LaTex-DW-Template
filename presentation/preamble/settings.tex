@@ -1,21 +1,38 @@
+% -----------------------------------------------
+% BEAMER VORLAGE – settings.tex
+% -----------------------------------------------
+
 \usetheme{default}
 \usecolortheme{default}
 \setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize item}{\color{fillaccent}\textbullet}
+\setbeamertemplate{itemize subitem}{\color{fillblue}--}
+
+% Fußzeile: Seitenzahl rechts
 \setbeamertemplate{footline}{%
     \hfill\textcolor{gray}{\footnotesize\insertframenumber}\hspace{1em}\vspace{0.5em}
 }
 
-\definecolor{fillblue}{RGB}{14, 52, 75}
-\definecolor{fillaccent}{RGB}{183, 1, 0}
-\definecolor{filllight}{RGB}{250, 240, 240}
+% -----------------------------------------------
+% Farben
+% -----------------------------------------------
+\definecolor{fillblue}{RGB}{14, 52, 75}      % Dunkelblau (Primär)
+\definecolor{fillaccent}{RGB}{183, 1, 0}     % Rot (Akzent)
+\definecolor{filllight}{RGB}{250, 240, 240}  % Hellrot (Hintergründe)
+\definecolor{fillgray}{RGB}{100, 100, 100}   % Grau (Hilfstexte)
 
 \setbeamercolor{frametitle}{fg=fillblue}
 \setbeamercolor{title}{fg=white}
 \setbeamercolor{subtitle}{fg=white!80}
 \setbeamercolor{author}{fg=white!90}
+\setbeamercolor{date}{fg=white!70}
+\setbeamercolor{institute}{fg=white!80}
 \setbeamercolor{itemize item}{fg=fillaccent}
 \setbeamercolor{itemize subitem}{fg=fillblue}
 
+% -----------------------------------------------
+% Folientitel-Format
+% -----------------------------------------------
 \setbeamertemplate{frametitle}{%
     \vspace{0.6em}%
     {\large\bfseries\color{fillblue}\insertframetitle}%
@@ -24,6 +41,9 @@
     \par\vspace{0.3em}%
 }
 
+% -----------------------------------------------
+% Titelseiten-Template
+% -----------------------------------------------
 \setbeamertemplate{title page}{%
     \vfill
     \begin{center}
@@ -38,19 +58,26 @@
     \vfill
 }
 
+% -----------------------------------------------
+% Pakete
+% -----------------------------------------------
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[naustrian]{babel}
 \usepackage{lmodern}
-\usepackage{graphicx}
-\graphicspath{{../shared/images/}}
+\usepackage{array}
 \usepackage{tikz}
 \usetikzlibrary{positioning, arrows.meta}
-\usepackage{booktabs}
 \usepackage{colortbl}
-\usepackage{array}
+\usepackage{booktabs}
 
+% -----------------------------------------------
+% Hilfsbefehle
+% -----------------------------------------------
+% Zeitplan-Zelle: \plan färbt eine Tabellenzelle rot
 \newcommand{\plan}{\cellcolor{fillaccent!35}}
+
+% Hintergrund für Deckblatt / Abschlussfolie (dunkelblau + roter Balken unten)
 \newcommand{\darkbackground}{%
     \usebackgroundtemplate{%
         \begin{tikzpicture}[remember picture, overlay]

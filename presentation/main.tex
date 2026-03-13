@@ -1,15 +1,22 @@
 \documentclass[aspectratio=169]{beamer}
 \input{preamble/settings.tex}
 
+% -----------------------------------------------
+% Metadaten – hier anpassen
+% -----------------------------------------------
 \title{Titel der Präsentation}
 \subtitle{Untertitel}
-\author{Daniel Weindl}
+\author{Vorname Nachname}
 \institute{}
 \date{}
 
+% -----------------------------------------------
 \begin{document}
+% -----------------------------------------------
 
-% Deckblatt
+% ============================
+% FOLIE 1: Deckblatt
+% ============================
 {
 \setbeamertemplate{footline}{}
 \darkbackground
@@ -18,9 +25,93 @@
 \end{frame}
 }
 
-\input{slides/inhalt}
+% ============================
+% FOLIE 2: Aufzählung
+% ============================
+\begin{frame}{Folientitel}
+    \begin{itemize}
+        \setlength{\itemsep}{0.8em}
+        \item Erster Punkt
+        \item Zweiter Punkt mit \textbf{Hervorhebung}
+        \item Dritter Punkt
+    \end{itemize}
+\end{frame}
 
-% Abschluss
+% ============================
+% FOLIE 3: Zwei Spalten
+% ============================
+\begin{frame}{Zwei Spalten}
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            \textbf{\color{fillblue} Linke Spalte}\\[0.5em]
+            \begin{itemize}
+                \item Punkt A
+                \item Punkt B
+                \item Punkt C
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \textbf{\color{fillblue} Rechte Spalte}\\[0.5em]
+            \begin{itemize}
+                \item Punkt D
+                \item Punkt E
+                \item Punkt F
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% ============================
+% FOLIE 4: Hervorgehobene Frage / Aussage
+% ============================
+\begin{frame}{Zentrale Frage}
+    \vspace{0.6em}
+    \begin{center}
+        \setlength{\fboxrule}{1.5pt}%
+        \fcolorbox{fillaccent}{white}{\parbox{0.88\textwidth}{%
+            \vspace{0.4em}
+            \centering
+            {\large\color{fillblue}
+            Hier steht eine zentrale Frage oder\\
+            eine wichtige Aussage die hervorgehoben werden soll.}
+            \vspace{0.4em}
+        }}
+    \end{center}
+    \vspace{0.7em}
+    \textbf{Unterpunkte}\\[0.4em]
+    \begin{itemize}
+        \setlength{\itemsep}{0.3em}
+        \item Erster Unterpunkt
+        \item Zweiter Unterpunkt
+        \item Dritter Unterpunkt
+    \end{itemize}
+\end{frame}
+
+% ============================
+% FOLIE 5: Zeitplan-Tabelle
+% ============================
+\begin{frame}{Zeitplan}
+    \vspace{0.8em}
+    \large
+    \setlength{\tabcolsep}{18pt}
+    \renewcommand{\arraystretch}{1.8}
+    \begin{center}
+        \begin{tabular}{lccc}
+            \toprule
+            \textbf{Arbeitspaket} & \textbf{Monat 1} & \textbf{Monat 2} & \textbf{Monat 3} \\
+            \midrule
+            Arbeitspaket 1  & \plan &       &       \\
+            Arbeitspaket 2  & \plan & \plan &       \\
+            Arbeitspaket 3  &       & \plan &       \\
+            Arbeitspaket 4  &       &       & \plan \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+% ============================
+% FOLIE 6: Abschluss
+% ============================
 {
 \setbeamertemplate{footline}{}
 \darkbackground
